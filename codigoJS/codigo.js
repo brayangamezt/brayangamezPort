@@ -10,9 +10,9 @@ const cargarImagen = (entradas, observador)=>{
 		if(entrada.isIntersecting){
 			console.log('la imagen esta en el viewport')
 			entrada.target.classList.add('visible');
-		}else{
+		}/*else{
 			entrada.target.classList.remove('visible');
-		}
+		}*/
 	});
 }
 const observador = new IntersectionObserver(cargarImagen, {
