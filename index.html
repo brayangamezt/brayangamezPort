@@ -1,155 +1,326 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="codigoCSS/estilos.css">
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Philosopher&display=swap" rel="stylesheet">
-    <link rel="icon" type="favicon/x-1" href="img/favicon.ico">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="https://kit.fontawesome.com/29ac9bb5bb.js" crossorigin="anonymous"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="codigoCSS/estilos.css">
+	<link rel="stylesheet" type="text/css" href="codigoCSS//responsive.css">
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital@1&family=Philosopher&display=swap"
+		rel="stylesheet">
+	<link rel="icon" type="favicon/x-1" href="img/favicon.ico">
+	<script src="https://kit.fontawesome.com/29ac9bb5bb.js" crossorigin="anonymous"></script>
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 	<title>BG developer</title>
 </head>
-<body>
 
+<body style="background-color: black;">
 	<div class="principal">
-		<header class="Bio-info" >
+		<header class="Bio-info">
 			<div class="pe-info">
 				<img src="img/bioImg.jpeg">
-				<p id="bio-title">Hi my name is Brayan</p>
-				<div id="sub-title">
-					<h5 id="frontend">Frontend</h5>
-					<h5 id="space">/</h5>
-					<h5 id="backend">backend developer</h5>
+				<div id="container-presentation">
+					<div id="typed">
+						<h3>Hello! i´m : <span class="typed"></span>  </h3>
+					</div>
+					<p id="resume">
+						Developer who loves websites design, if your are interested to know more about me and my
+						work
+						experience you can download my CV or check my projects.
+					</p>
 				</div>
 			</div>
-			<video  loop="true" autoplay="autoplay" muted="true">
+			<video loop="true" autoplay="autoplay" muted="true">
 				<source src="videos/fondo2.mp4">
 			</video>
-	    </header>
-	    <main>
-			<div id="skills"><!--Inicio de las skills-->
-				<h3>PROGRAMING SKILLS</h3>
-				<div id="panel">
-					<ul >
-						<li><i class="fab fa-html5 size" id="html"></i></li>
-						<li><i class="fab fa-css3 size" id="css"></i></li>
-						<li><i class="fab fa-node-js size" id="node"></i></li>
-						<li><i class="fab fa-js size" id="js"></i></li>
-						<li><i class="fab fa-angular size" id="angular"></i></li>
-						<li><i class="fab fa-python size" id="python"></i></li>
-						<li id="seven"><i class="fab fa-bootstrap size" id="bootstrap"></i></li>
-				    </ul>
-				</div>
-			</div><!--Fin de las skills-->
+		</header>
+
+		<main>
 
 			<!--Inicio del about me-->
-			<div id="about">
-				<h3>About me</h3>
-				<p>I´m mechatronic engineer with a passion for coding. Currenly im open fullstack and front/backend opportunities</p>
-				<p>I´ve had expertise developing personal projects with different technologies such as JavaScript, TypeScript, Node.JS, MongoDB, JQuery, Express, but im willing to learn other kind of technologies and languajes. Here inside of this website you will be able to see some of my projects and the technologies which were used to coding it</p>
-				<p>If you wanna know more about my work experience, you can download mi resume </p>
-				<button><a href="pdf/brayangamezt-cv.pdf" download="bg.cv">Download resume</a></button>
+			<div id="about-title">
+				<div class="linea"></div>
+				<h3 id="about-me">About me</h3>
+				<div class="linea"></div>
+			</div>
+			<div data-aos="fade-up" data-aos-duration="3000" id="about">
+				<p>I´m a mechatronic engineer with a passion for coding. Currenly im open to fullstack or front/backend
+					opportunities</p>
+				<p>I´ve had expertise developing personal projects with different technologies such as JavaScript,
+					TypeScript, Node.JS, MongoDB, JQuery, Express, but im willing to learn other kind of technologies
+					and languajes. Here inside of this website you will be able to see some of my projects and the
+					technologies which were used to code them</p>
+				<p>If you wanna know more about my work experience, you can download my resume </p>
+				<button>
+					<a href="pdf/brayangamezt-cv.pdf" download="bg.cv">Download resume </a>
+					<i class="fas fa-download"></i>
+				</button>
 			</div>
 			<!--Fin del about me-->
-			<p id="title-projects">PROJECTS</p>
+
+
+			<!--INICIO DE LAS SKILLS-->
+			<div id="skills-title">
+				<div class="linea"></div>
+				<h3 id="skills">My skills</h3>
+				<div class="linea"></div>
+			</div>
+			<div id="skills-container">
+				<div data-aos="fade-up" data-aos-duration="3000" id="front-end">
+					<h3>Fronted/backend</h3>
+					<i class="fas fa-laptop-code" id="frontend-icon"></i>
+					<div class="skills-using">
+						<div class="cards">
+							<i class="fab fa-html5 icon" style="color: orangered;"></i>
+							<p>HTML</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-css3-alt icon" id="css" style="color: blue;"></i>
+							<p>Css</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-sass icon" style="color: palevioletred;"></i>
+							<p>Sass</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-bootstrap icon" style="color: purple;"></i>
+							<p>Bootstrap</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-js icon" style="color: yellow;"></i>
+							<p>JavaScript</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-react icon" style="color: aqua;"></i>
+							<p>React</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-angular icon" style="color: red;"></i>
+							<p>Angular</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-github icon" style="color: purple;"></i>
+							<p>GitHub</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-python icon" style="color: yellowgreen;"></i>
+							<p>Python</p>
+						</div>
+						<div class="cards">
+							<i class="fab fa-node icon" style="color: green;"></i>
+							<p>Node</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!--FIN DE LAS SKILLS-->
+
+
+			<div id="projects-title">
+				<div class="linea"></div>
+				<h3 id="title-projects">Projects</h3>
+				<div class="linea"></div>
+			</div>
 			<section>
-				<div class="project" id="proyecto1"> <!--Este es el primer proyecto-->
-					<div class="img-project" id="project-1">
-						<figcaption class="overlay">
-							<div class="overlay-texto">
-								<p>School</p>
-							    <div>
-							    	<a href="https://github.com/brayangamezt/coding-school" target="_blank"><i class="fab fa-github-square" ></i></a>
-							    	<a href="https://brayangamezt.github.io/coding-school/" target="_blank"><i class="fas fa-folder-open"></i></a>
-							    </div><!--Aqui falta github y proyecto-->
-							</div>
-						</figcaption>
+
+				<div class="project-container">
+					<div class="project" id="proyecto3">
+						<!--Inicio del tercer proyecto-->
+						<div class="img-project" id="project-3">
+							<figcaption class="overlay">
+								<div class="overlay-texto">
+									<p>PET SITE</p>
+									<div>
+										<a href=""><i class="fab fa-github-square"></i></a>
+										<a href="https://zona-mascota.herokuapp.com/" target="_blank"><i
+												class="fas fa-folder-open"></i></a>
+									</div>
+									<!--Aqui falta github y proyecto-->
+								</div>
+							</figcaption>
+						</div>
+						<div class="footer-project">
+							<ul>
+								<li><i class="fab fa-html5 class texto-tool"><span class="tooltiptext"> Html</span></i>
+								</li>
+								<li><i class="fab fa-css3-alt texto-tool"><span class="tooltiptext">CSS</span></i></li>
+								<li><i class="fab fa-bootstrap texto-tool"><span
+											class="tooltiptext">Bootstrap</span></i>
+								</li>
+								<li><i class="fab fa-angular texto-tool"><span class="tooltiptext">Angular</span></i>
+								</li>
+							</ul>
+						</div>
 					</div>
-
-					<div class="footer-project">
-						<ul>
-							<li><i class="fab fa-html5 texto-tool" ><span class="tooltiptext"> Html</span></i></li>
-							<li><i class="fab fa-css3-alt texto-tool"><span class="tooltiptext">CSS</span></i></li>
-							<li><i class="fab fa-bootstrap texto-tool"><span class="tooltiptext">Bootstrap</span></i></li>
-							<li><i class="fab fa-js texto-tool"><span class="tooltiptext">JavaScript</span></i></li>
-						</ul>
-					</div>
-				</div>
-
-
-
-				<div class="project" id="proyecto2" > <!---Inicio del segundo proyecto-->
-					<div class="img-project" id="project-2">
-						<figcaption class="overlay">
-							<div class="overlay-texto">
-								<p>WEATHER-APP</p>
-							    <div>
-							    	<a href="https://github.com/brayangamezt/weather" target="_blank"><i class="fab fa-github-square" ></i></a>
-							    	<a href="https://brayangamezt.github.io/weather/" target="_blank"><i class="fas fa-folder-open"></i></a>
-							    </div><!--Aqui falta github y proyecto-->
-							</div>
-						</figcaption>
-					</div>
-
-					<div class="footer-project">
-						<ul>
-							<li><i class="fab fa-html5 class texto-tool"><span class="tooltiptext"> Html</span></i></li>
-							<li><i class="fab fa-css3-alt texto-tool"><span class="tooltiptext">CSS</span></i></li>
-							<li><i class="fab fa-bootstrap texto-tool"><span class="tooltiptext">Bootstrap</span></i></li>
-							<li><i class="fab fa-angular texto-tool"><span class="tooltiptext">Angular</span></i></li>
-						</ul>
+					<div class="project-information">
+						<h1>Zona-pet</h1>
+						<p>
+							This website have the purpose to help people find
+							their lost pets, sharing information about them.
+						</p>
+						<p>Technologies: Angular, Node, Express, Css, Html, Bootstrap, MongoDB, Typescript</p>
+						<button>
+							<a href="https://zona-mascota.herokuapp.com/#/" target="_blank">visit site</a>
+						</button>
 					</div>
 				</div>
 
+				<div class="project-container">
+					<div class="project" id="proyecto2">
+						<!---Inicio del segundo proyecto-->
+						<div class="img-project" id="project-2">
+							<figcaption class="overlay">
+								<div class="overlay-texto">
+									<p>WEATHER-APP</p>
+									<div>
+										<a href="https://github.com/brayangamezt/weather" target="_blank"><i
+												class="fab fa-github-square"></i></a>
+										<a href="https://brayangamezt.github.io/weather/" target="_blank"><i
+												class="fas fa-folder-open"></i></a>
+									</div>
+									<!--Aqui falta github y proyecto-->
+								</div>
+							</figcaption>
+						</div>
 
-
-				<div class="project" id="proyecto3" > <!--Inicio del tercer proyecto-->
-					<div class="img-project" id="project-3">
-						<figcaption class="overlay">
-							<div class="overlay-texto">
-								<p>PET SITE</p>
-							    <div>
-							    	<a href=""><i class="fab fa-github-square" ></i></a>
-							    	<a href="https://zona-mascota.herokuapp.com/" target="_blank"><i class="fas fa-folder-open"></i></a>
-							    </div><!--Aqui falta github y proyecto-->
-							</div>
-						</figcaption>
+						<div class="footer-project">
+							<ul>
+								<li><i class="fab fa-html5 class texto-tool"><span class="tooltiptext"> Html</span></i>
+								</li>
+								<li><i class="fab fa-css3-alt texto-tool"><span class="tooltiptext">CSS</span></i></li>
+								<li><i class="fab fa-bootstrap texto-tool"><span
+											class="tooltiptext">Bootstrap</span></i>
+								</li>
+								<li><i class="fab fa-angular texto-tool"><span class="tooltiptext">Angular</span></i>
+								</li>
+							</ul>
+						</div>
 					</div>
-					<div class="footer-project">
-						<ul>
-							<li><i class="fab fa-html5 class texto-tool"><span class="tooltiptext"> Html</span></i></li>
-							<li><i class="fab fa-css3-alt texto-tool"><span class="tooltiptext">CSS</span></i></li>
-							<li><i class="fab fa-bootstrap texto-tool"><span class="tooltiptext">Bootstrap</span></i></li>
-							<li><i class="fab fa-angular texto-tool"><span class="tooltiptext">Angular</span></i></li>
-						</ul>
+					<div class="project-information">
+						<h1>Weather-app</h1>
+						<p>
+							A website when you can get the weather of the city you want
+							just by typing the name
+						</p>
+						<p>Technologies: Angular, API, Css, Html, Typescript, Responsive</p>
+						<button>
+							<a href="https://brayangamezt.github.io/weather/" target="_blank">visit site</a>
+						</button>
 					</div>
 				</div>
 
+				<div class="project-container">
+					<div class="project" id="proyecto4">
+						<!---Inicio del segundo proyecto-->
+						<div class="img-project" id="project-4">
+							<figcaption class="overlay">
+								<div class="overlay-texto">
+									<p>Expense-app</p>
+									<div>
+										<a href="https://github.com/brayangamezt/weather" target="_blank"><i
+												class="fab fa-github-square"></i></a>
+										<a href="https://applistagastos.web.app" target="_blank"><i
+												class="fas fa-folder-open"></i></a>
+									</div>
+									<!--Aqui falta github y proyecto-->
+								</div>
+							</figcaption>
+						</div>
+
+						<div class="footer-project">
+							<ul>
+								<li><i class="fab fa-html5 class texto-tool"><span class="tooltiptext"> Html</span></i>
+								</li>
+								<li><i class="fab fa-css3-alt texto-tool"><span class="tooltiptext">CSS</span></i></li>
+								<li><i class="fab fa-js texto-tool"><span class="tooltiptext">JavaScript</span></i></li>
+								<li><i class="fab fa-react texto-tool"><span class="tooltiptext">React</span></i></li>
+							</ul>
+						</div>
+					</div>
+					<div class="project-information">
+						<h1>Expense application</h1>
+						<p>
+							In this website you can sign in with you email account and start
+							saving your month expense to keep a better record of these.
+						</p>
+						<p>Technologies: React js, Css, Html, Firebase, Js</p>
+						<button>
+							<a href="https://applistagastos.web.app" target="_blank">visit site</a>
+						</button>
+					</div>
+				</div>
+
+				<div class="project-container">
+					<div class="project" id="proyecto1">
+						<!--Este es el primer proyecto-->
+						<div class="img-project" id="project-1">
+							<figcaption class="overlay">
+								<div class="overlay-texto">
+									<p>School</p>
+									<div>
+										<a href="https://github.com/brayangamezt/coding-school" target="_blank"><i
+												class="fab fa-github-square"></i></a>
+										<a href="https://brayangamezt.github.io/coding-school/" target="_blank"><i
+												class="fas fa-folder-open"></i></a>
+									</div>
+									<!--Aqui falta github y proyecto-->
+								</div>
+							</figcaption>
+						</div>
+
+						<div class="footer-project">
+							<ul>
+								<li><i class="fab fa-html5 texto-tool"><span class="tooltiptext"> Html</span></i></li>
+								<li><i class="fab fa-css3-alt texto-tool"><span class="tooltiptext">CSS</span></i></li>
+								<li><i class="fab fa-bootstrap texto-tool"><span
+											class="tooltiptext">Bootstrap</span></i></li>
+								<li><i class="fab fa-js texto-tool"><span class="tooltiptext">JavaScript</span></i></li>
+							</ul>
+						</div>
+					</div>
+					<div class="project-information">
+						<h1>Coding school</h1>
+						<p>
+							In this website you can get information about different courses to
+							become a web developer
+						</p>
+						<p>Technologies: Css, Html, Js, Responsive</p>
+						<button>
+							<a href="https://brayangamezt.github.io/coding-school/" target="_blank">visit site</a>
+						</button>
+					</div>
+				</div>
 
 			</section>
-		
-	    </main>
+
+		</main>
 		<footer>
 			<div id="footer-one">
 				<h3>Contact information</h3>
 				<div id="bio-container">
-					<ul >
-						<li><a href="https://github.com/brayangamezt" target="_blank"><i class="fab fa-github-square"></i><span> Git HUB</span></a></li>
-						<li><a href="https://www.linkedin.com/in/bryan-isaac-gamez-trujillo-369262161/" target="_blank"><i class="fab fa-linkedin" ></i><span>LINKEDLN</span></a></li>
-						<li><a href="https://www.facebook.com/bryan.gamez.9"  target="_blank"><i class="fab fa-facebook-square"></i><span>FACEBOOK</span></a></li>
-						<li><a href="mailto:bgamezt@outlook.com" ><i class="fas fa-envelope"></i><span>EMAIL</span></a></li>
-						<li><a href="tel:+6624763758" ><i class="fas fa-phone-square"></i><span>CELLPHONE</span></a></li>
+					<ul>
+						<li><a href="https://github.com/brayangamezt" target="_blank"><i
+									class="fab fa-github-square"></i><span> Git HUB</span></a></li>
+						<li><a href="https://www.linkedin.com/in/bryan-isaac-gamez-trujillo-369262161/"
+								target="_blank"><i class="fab fa-linkedin"></i><span>LINKEDLN</span></a></li>
+						<li><a href="https://www.facebook.com/bryan.gamez.9" target="_blank"><i
+									class="fab fa-facebook-square"></i><span>FACEBOOK</span></a></li>
+						<li><a href="mailto:bgamezt@outlook.com"><i class="fas fa-envelope"></i><span>EMAIL</span></a>
+						</li>
+						<li><a href="tel:+6624763758"><i class="fas fa-phone-square"></i><span>CELLPHONE</span></a></li>
 					</ul>
 				</div>
 			</div>
 			<div id="footer-two">
 				<h3>Current location</h3>
 				<div id="location">
-					<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223154.48942163843!2d-111.12907486746803!3d29.082382466553174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce84687adfaee5%3A0xb33d5395e9887ff9!2sHermosillo%2C%20Son.!5e0!3m2!1ses-419!2smx!4v1633932478384!5m2!1ses-419!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+					<iframe
+						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d223154.48942163843!2d-111.12907486746803!3d29.082382466553174!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ce84687adfaee5%3A0xb33d5395e9887ff9!2sHermosillo%2C%20Son.!5e0!3m2!1ses-419!2smx!4v1633932478384!5m2!1ses-419!2smx"
+						width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
 				</div>
 			</div>
 			<div id="footer-three">
@@ -166,7 +337,10 @@
 		</footer>
 	</div>
 
-
+	<!--<script src="escritura/typed.12"></script>-->
+	<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/typed.js@latest/lib/typed.min.js"></script>
 	<script type="text/javascript" src="codigoJS/codigo.js"></script>
 </body>
+
 </html>

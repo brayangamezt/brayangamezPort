@@ -1,12 +1,11 @@
+body{
+	background-color:black;
+}
+
 *{
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-}
-
-body{
-	/*background-color: #CFCFCF;*/
-	background-image: url(../img/pattern.png);
 }
 
 /*HEADER HADER*/
@@ -19,7 +18,6 @@ body{
 	height: 575px;
 	position: relative;
 	overflow: hidden;
-	border-bottom: 2px solid black;
 }
 
 .Bio-info video {
@@ -30,27 +28,7 @@ body{
 	display: flex;
 	justify-content: center;
 }
-.Bio-info .pe-info #sub-title #frontend{
-	animation: left-begin 2s linear;
-}
-.Bio-info .pe-info #sub-title #backend{
-	animation: right-begin 2s linear;
-}
-.Bio-info .pe-info #sub-title #space{
-	animation: spacer 2s linear;
-}
-@keyframes left-begin{
-	from{transform: translateX(-1000%);}
-	to{transform: translateX(0%);}
-}
-@keyframes right-begin{
-	from{transform: translateX(1000%);}
-	to{transform: translateX(0%);}
-}
-@keyframes spacer{
-	from{transform: translateY(600%);}
-	to{transform: translateY(0%);}
-}
+
 
 /*Todo el codigo que va dentro de la clase pe-info*/
 /**************************************************/
@@ -79,110 +57,38 @@ body{
 	color: white;
 	margin-top: 30px;
 }
-.pe-info h5{
-	font-family: 'noto serif',serif;
-	font-size: 25px;
-	letter-spacing: 2px;
+.pe-info #container-presentation{
+	display:flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
+.pe-info #container-presentation #typed{
+	width: 40%;
+	display: flex;
+	justify-content: center;
+}
+
+.my-information{
+	color: #c99806;
+}
+
+.pe-info #container-presentation #speciality{
+	letter-spacing: 2px;
+	font-style: italic;
+}
+.pe-info #container-presentation #resume{
+	width: 50%;
+}
 
 
 /*PROGRAMACION PARA EL MAIN*/
 /***************************/
 
-/*AQUI INICIAN LAS SKILLS*/
-/*************************/
-#skills{
-	background-color: black;
-	height: 150px;
-	overflow: hidden;
-	width: 100%;
-}
-
-#skills h3{
-	color:rgb(90, 202, 247);
-	font-size: 30px;
-	text-align: center;
-	font-family: 'noto serif',serif;
-	margin-bottom: 0;
-	padding-top: 30px;
-	z-index: 100;
-}
-
-#skills #panel ul{
-	display: flex;
-	justify-content: center;
-	list-style: none;
-	margin-top: 20px;
-	margin-bottom: 20px;
-}
-
-#skills #panel ul li{
-	background-color: black;
-	margin-right: 50px;
-}
-
-#skills #panel ul li:hover{
-	transform: scale(1.3);
-	cursor: pointer;
-}
-#skills #panel .size{
-	font-size: 45px;
-}
-#skills #panel ul #js{
-	color: yellow;
-	animation: opa 7s linear;
-}
-#skills #panel ul #css{
-	color: blue;
-	animation: left2 3s linear;
-}
-#skills #panel ul #html{
-	color: orangered;
-	animation: left1 3s linear;
-}
-#skills #panel ul #node{
-	color: green;
-	animation: opa 7s linear;
-}
-#skills #panel ul #angular{
-	color: red;
-	animation: opa 7s linear;
-}
-#skills #panel ul #python{
-	color: yellowgreen;
-	animation: right2 3s linear;
-}
-#skills #panel ul #bootstrap{
-	color: purple;
-	animation: right1 3s linear;
-}
-@keyframes right1{
-	from{transform: translateX(1000%);}
-	to{transform: translateX(0%);}
-}
-@keyframes right2{
-	from{transform: translateX(900%);}
-	to{transform: translateX(0%);}
-}
-@keyframes left1{
-	from{transform: translateX(-1000%);}
-	to{transform: translateX(0%);}
-}
-@keyframes left2{
-	from{transform: translateX(-900%);}
-	to{transform: translateX(0%);}
-}
-@keyframes opa{
-	0%{opacity: 0;}
-	50%{opacity: 0.5;}
-	100%{opacity: 1;}
-}
-
-/*AQUI TERMINAN LAS SKILLS*/
-/**************************/
 
 .principal main{
+	background-color: black;
 	display: flex;
 	flex-direction: column;
 	flex-wrap: wrap;
@@ -191,68 +97,195 @@ body{
 }
 
 /*Inicio del about me*/
+.principal main #about-title{
+	margin-top: 100px;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.linea{
+	background-color: rgb(90, 202, 247);
+	border: 1px solid rgb(90, 202, 247);
+	flex-basis: 30%;
+}
+
+.principal main #about-me{
+	width: 30%;
+	text-align: center;
+	background-color: black;
+	border-radius: 7px;
+	color:rgb(90, 202, 247);
+	font-family: 'noto serif',serif;
+	letter-spacing: 2px;
+	font-size: 50px;
+}
+
 .principal main #about{
 	width: 70%;
 	display: flex;
 	flex-direction: column;
-	margin-top: 70px;
+	margin-top: 25px;
 	margin-bottom: 50px;
+	border-radius: 10px;
 	padding: 20px;
 	text-align: justify;
-	border: 1px solid rgba(95, 94, 94, 0.712);
+	color: white;
+	border: 1px solid  rgb(90, 202, 247);
 	position: relative;
-	box-shadow: 0px 0px 5px rgb(90, 202, 247) ;
 	justify-content: center;
 	align-items: center;
-	background-color: rgb(238, 237, 237);
+	background-color: rgba(46, 46, 46, 0.7);
 }
-.principal main #about h3{
-	width: 30%;
-	text-align: center;
-	border-radius: 7px;
-	background-color: rgb(90, 202, 247);
-	color:black;
-	font-family: 'noto serif',serif;
-	letter-spacing: 2px;
-	border: 1px solid black;
-}
+
 .principal main #about button{
-	background-color: black;
+	background-color:  rgb(90, 202, 247);
+	padding: 10px;
 	width: 35%;
 	margin-top: 20px;
+	border-radius: 8px;
 }
 .principal main #about button a{
-	color: white;
+	color: black;
+	text-decoration: none;
 }
 
 /*Fin del about me*/
 
 
-
-main #title-projects{
-	width: 100%;
-	height: 50px;
-	margin: 0 auto;
+/*INICIO SKILLS*/
+.principal main #skills-title{
+	margin-top: 100px;
+	width: 70%;
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	font-size: 40px;
-	margin-top: 15px;
-	margin-bottom: 30px;
+}
+
+
+.principal main #skills-title #skills{
+	width: 30%;
+	text-align: center;
+	background-color: black;
+	border-radius: 7px;
+	color:rgb(90, 202, 247);
 	font-family: 'noto serif',serif;
+	letter-spacing: 2px;
+	font-size: 50px;
+}
+
+.principal main #skills-container{
+	width: 75%;
+	background-color: rgba(46, 46, 46, 0.7);
+	border: 1px solid rgb(90, 202, 247) ;
+	border-radius: 10px;
+	margin-bottom: 100px;
+	overflow: hidden;
+}
+.principal main #skills-container #front-end{
+	flex-basis: 50%;
+	text-align: center;
+}
+.principal main #skills-container #front-end h3{
+	color:white;
+	letter-spacing: 5px;
+	font-style: italic;
+}
+
+#backend-icon{
+	font-size: 30px;
+	padding: 5px;
+	border: 2px solid white;
+	color: white;
+	margin-bottom: 10px;
+}
+#frontend-icon{
+	font-size: 30px;
+	padding: 5px;
+	border: 2px solid white;
+	color: white;
+	margin-bottom: 10px;
+}
+.principal main #skills-container .skills-using{
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	margin-top: 40px;
+}
+.principal main #skills-container .cards{
+	flex-basis: 25%;
+	margin-top: 15px;
+}
+.principal main #skills-container .cards p{
+	color: white;
+}
+.principal main #skills-container .cards .icon{
+	font-size: 35px;
+}
+
+.principal main #skills-container .cards .icon:hover{
+	transform: scale(1.3);
+	cursor: pointer;
+}
+
+/*FIN SKILLS*/
+
+.principal main #projects-title{
+	margin-top: 100px;
+	width: 70%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+main #title-projects{
+	width: 30%;
+	text-align: center;
+	background-color: black;
+	border-radius: 7px;
+	color:rgb(90, 202, 247);
+	font-family: 'noto serif',serif;
+	letter-spacing: 2px;
+	font-size: 50px;
 }
 
 main section{
 	width: 100%;
 	height: auto;
-	display: flex;
-	justify-content: space-around;
-	flex-wrap: wrap;
-	align-items: center;
-	padding-top: 15px;
-	padding-bottom: 15px;
+	padding: 20px;
 }
 
+main section .project-container{
+	width: 90%;
+	display: flex;
+	margin-bottom: 30px;
+}
+
+main section .project-container .project-information{
+	flex-basis: 75%;
+	padding: 25px;
+	color: white;
+}
+main section .project-container .project-information h1{
+	font-style: italic;
+}
+main section .project-container .project-information p{
+	font-size: 25px;
+}
+
+main section .project-container .project-information button{
+	width: 20%;
+	padding: 10px;
+	border-radius: 20px;
+	background-color:rgb(90, 202, 247) ;
+	border: none;
+}
+main section .project-container .project-information a{
+	text-decoration: none;
+	color: black;
+}
 
 
 main section .project{
@@ -329,6 +362,12 @@ main section #project-2{
 
 main section #project-3{
 	background-image: url(../img/pet.PNG);
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+main section #project-4{
+	background-image: url(../img/appGastos.PNG);
 	background-position: center;
 	background-size: cover;
 	position: relative;
@@ -493,12 +532,59 @@ main section #project-3 .overlay-texto a{
 	width: 100%;
 	opacity: 0.7;
 }
+
+/*INICIO CUARTO OVERLAR*/
+main section #project-4 .overlay{ 
+	width:0%;
+	height: 100%;
+	position: absolute;
+	bottom:0;
+	left: 0;
+	right: 0;
+	background-color:rgba(0, 0, 0, 0.8);
+	overflow: hidden;
+	transition: 0.5s ease;
+}
+
+main section #project-4 .overlay-texto{
+	top:50%;
+	left:50%;
+	width: 399px;
+	position:absolute; /*posicionamiento del texto al iniciar*/
+	white-space: nowrap;
+	justify-content: center;
+	text-align: center;
+	color: white; /*color de la letra*/
+	transform: translate(-50%, -50%);
+	overflow:hidden; /*oculta el contenido que sale de la cada, es decir el que no cabe, se puede usar con hidden o scroll*/
+	font-size: 20px;
+	font-weight: 700;
+}
+
+main section #project-4 .overlay-texto a{
+	display: inline-block;
+	color: white;
+	font-size: 35px;
+	padding: 15px;
+	justify-content: center;
+	text-decoration: none;
+}
+
+#project-4:hover .overlay{
+	width: 100%;
+	opacity: 0.7;
+}
+
+
+/*FIN CUARTO OVERLAY*/
+
+
 /*******************AQUI TERMINAN LOS OVERLAY**********/
 /******************************************************/
 
 /**INICIO DEL FOOTER*********/
 footer{
-	margin-top: 100px;
+	margin-top: 50px;
 	background-color: black;
 	padding-top: 20px;
 	padding-bottom: 20px;
@@ -595,474 +681,4 @@ footer #footer-one #bio-container ul li span{
 
 /**FIN DE FOOTER**/
 
-
-/*INICIO RESPONSIVE*/
-@media (max-width:1100px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-	}
-}
-@media (max-width:1020px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 560px;
-	}
-	main section .project{
-		width: 25%;
-		height: 300px;
-		margin-bottom: 15px;
-		display: inline-block;
-		box-shadow: 0px 0px 10px rgb(9, 57, 187);
-		border-radius: 5px;
-		background-size: cover;
-		padding: 0;
-	}
-	main section .project .img-project{
-		width: 100%;
-		height: 280px;
-	}
-}
-@media (max-width:992px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 540px;
-	}
-}
-@media (max-width:958px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 500px;
-	}
-	main section .project{
-		width: 25%;
-		height: 275px;
-		margin-bottom: 15px;
-		display: inline-block;
-		box-shadow: 0px 0px 10px rgb(9, 57, 187);
-		border-radius: 5px;
-		background-size: cover;
-		padding: 0;
-	}
-	main section .project .img-project{
-		width: 100%;
-		height: 250px;
-	}
-	footer{
-		width: 100%;
-	}
-}
-@media (max-width:888px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 460px;
-	}
-	main section .project{
-		width: 25%;
-		height: 275px;
-		margin-bottom: 15px;
-		display: inline-block;
-		box-shadow: 0px 0px 10px rgb(9, 57, 187);
-		border-radius: 5px;
-		background-size: cover;
-		padding: 0;
-	}
-	main section .project .img-project{
-		width: 100%;
-		height: 250px;
-	}
-	main section .footer-project ul li{
-		color: rgb(90, 202, 247);
-		font-size: 15px;
-	}
-	#bio-container ul li a{ /*Esto es para cambiarles de color a los iconos*/
-		font-size: 20px; /*Hacer crecer el tamaño de los iconos*/
-	}
-	footer{
-		width: 100%;
-	}
-	footer #footer-one #bio-container ul li span{
-		font-size: 15px;
-	}
-	#browser a img{
-		width: 100%;
-		height: 30px;
-		margin: 5px;
-	}
-}
-@media(max-width:814px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 400px;
-	}
-	.principal .Bio-info .pe-info #bio-title{
-		font-size: 20px;
-	}
-	.principal .Bio-info .pe-info #sub-title #frontend{
-		font-size: 20px;
-	}
-	.principal .Bio-info .pe-info #sub-title #space{
-		font-size: 20px;
-	}
-	.principal .Bio-info .pe-info #sub-title #backend{
-		font-size: 20px;
-	}
-	#skills h3{
-		font-size: 20px;
-		padding-top: 20px;
-	}
-	#skills #panel .size{
-		font-size: 35px;
-	}
-	#skills{
-		height: 120px;
-		overflow: hidden;
-	}
-	.pe-info img{
-		width: 200px;
-		border-radius: 50%;
-		margin-top: 50px;
-	}
-	footer h3{
-		font-size: 20px;
-	}
-	main #title-projects{
-		font-size: 25px;
-	}
-}
-@media(max-width:708px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 360px;
-	}
-	footer{
-		width: 100%;
-	}
-}
-@media(max-width:678px){
-	.principal{
-		width: 100%;
-	}
-	main #about h3{
-		font-size: 15px;
-	}
-	main #about p{
-		font-size: 12px;
-	}
-	main #about button a{
-		font-size: 10px;
-	}
-	.principal main section{
-		display: flex;
-		flex-direction: column;
-	}
-	main section .project{
-		width: 50%;
-		height: 275px;
-		margin-bottom: 25px;
-		display: inline-block;
-		box-shadow: 0px 0px 10px rgb(9, 57, 187);
-		border-radius: 5px;
-		background-size: cover;
-	}
-	footer{
-		width: 100%;
-	}
-}
-@media(max-width:638px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 310px;
-	}
-	.pe-info img{
-		width: 170px;
-		border-radius: 50%;
-		margin-top: 30px;
-	}
-	.principal .Bio-info .pe-info #bio-title{
-		font-size: 18px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	.principal .Bio-info .pe-info #sub-title #frontend{
-		font-size: 18px;
-	}
-	.principal .Bio-info .pe-info #sub-title #space{
-		font-size: 18px;
-	}
-	.principal .Bio-info .pe-info #sub-title #backend{
-		font-size: 18px;
-	}
-	footer h3{
-		font-size: 15px;
-	}
-	#bio-container ul li a{ /*Esto es para cambiarles de color a los iconos*/
-		font-size: 15px; /*Hacer crecer el tamaño de los iconos*/
-	}
-	footer{
-		width: 100%;
-	}
-	footer #footer-one #bio-container ul li span{
-		font-size: 12px;
-	}
-	footer #footer-two #location iframe{
-		width: 80%;
-		height: 190px;
-	}
-	#browser a img{
-		width: 100%;
-		height: 20px;
-		margin: 5px;
-	}
-}
-@media(max-width:570px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 290px;
-	}
-	#skills{
-		height: 100px;
-		overflow: hidden;
-	}
-	#skills h3{
-		font-size: 15px;
-		padding-top: 10px;
-	}
-	#skills #panel .size{
-		font-size: 25px;
-	}
-	footer{
-		width: 100%;
-	}
-}
-@media(max-width:514px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 260px;
-	}
-	.pe-info img{
-		width: 140px;
-		border-radius: 50%;
-		margin-top: 30px;
-	}
-	.principal .Bio-info .pe-info #bio-title{
-		font-size: 15px;
-		margin-top: 10px;
-		margin-bottom: 10px;
-	}
-	.principal .Bio-info .pe-info #sub-title #frontend{
-		font-size: 15px;
-	}
-	.principal .Bio-info .pe-info #sub-title #space{
-		font-size: 15px;
-	}
-	.principal .Bio-info .pe-info #sub-title #backend{
-		font-size: 15px;
-	}
-	#skills #panel ul li{
-		background-color: black;
-		margin-right: 30px;
-	}
-	footer{
-		width: 100%;
-	}
-	footer h3{
-		font-size: 10px;
-	}
-	#bio-container ul li a{ /*Esto es para cambiarles de color a los iconos*/
-		font-size: 12px; /*Hacer crecer el tamaño de los iconos*/
-	}
-	footer #footer-one #bio-container ul li span{
-		font-size: 10px;
-	}
-	#browser a img{
-		width: 100%;
-		height: 15px;
-		margin: 5px;
-	}
-	#footer-three #audor{
-		font-size: 12px;
-	}
-}
-@media (max-width:414px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 220px;
-	}
-	.pe-info img{
-		width: 120px;
-		border-radius: 50%;
-		margin-top: 30px;
-	}
-	.principal .Bio-info .pe-info #bio-title{
-		font-size: 10px;
-		margin-top: 5px;
-		margin-bottom: 10px;
-	}
-	.principal .Bio-info .pe-info #sub-title #frontend{
-		font-size: 10px;
-	}
-	.principal .Bio-info .pe-info #sub-title #space{
-		font-size: 10px;
-	}
-	.principal .Bio-info .pe-info #sub-title #backend{
-		font-size: 10px;
-	}
-	.principal main #about h3{
-		width: 70%;
-		font-size: 12px;
-	}
-	footer{
-		width: 100%;
-	}
-	footer h3{
-		font-size: 8px;
-	}
-	footer #footer-three{
-		display: none;
-	}
-	footer #footer-two iframe{
-		width: 100%;
-	}
-	main section .project{
-		width: 70%;
-	}
-	.principal main #about button{
-		width: 40%;
-	}
-}
-@media(max-width:375px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 200px;
-	}
-	#skills{
-		height: 80px;
-		overflow: hidden;
-	}
-	footer{
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-	footer #footer-one{
-		flex-basis: 50%;
-	}
-	footer #footer-two{
-		flex-basis:50%;
-		padding-right: 10px;
-	}
-}
-@media(max-width:320px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 180px;
-	}
-	.pe-info img{
-		width: 100px;
-		border-radius: 50%;
-		margin-top: 30px;
-	}
-	#skills #panel ul li{
-		background-color: black;
-		margin-right: 20px;
-	}
-	#skills #panel .size{
-		font-size: 20px;
-	}
-	.principal main #about{
-		width: 80%;
-	}
-	.principal main #about h3{
-		width: 70%;
-		font-size: 12px;
-	}
-	.principal main #about button{
-		width: 60%;
-	}
-	footer{
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-	footer #footer-one{
-		flex-basis: 50%;
-	}
-	footer #footer-two{
-		flex-basis:50%;
-	}
-}
-@media(max-width:280px){
-	.principal{
-		width: 100%;
-	}
-	.principal .Bio-info{
-		width: 100%;
-		height: 150px;
-	}
-	.pe-info img{
-		width: 80px;
-		border-radius: 50%;
-		margin-top: 15px;
-	}
-	#skills h3{
-		font-size: 11px;
-		padding-top: 10px;
-	}
-	.principal main #about{
-		margin-top: 30px;
-		margin-bottom: 30px;
-	}
-	footer{
-		width: 100%;
-		display: flex;
-		justify-content: center;
-	}
-	footer #footer-one{
-		flex-basis: 50%;
-	}
-	footer #footer-two{
-		flex-basis:50%;
-	}
-
-}
-/*FIN RESPONSIVE*/
 
